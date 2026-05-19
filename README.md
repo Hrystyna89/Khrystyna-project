@@ -1,8 +1,12 @@
 # My MVP Project
 
 ## Опис
-Це навчальний MVP-проєкт для демонстрації роботи з Git.
-
+Навчальний GitFlow проєкт
+<<<<<<< HEAD
+Навчальний GitFlow проєкт
+=======
+MVP для університету
+>>>>>>> feature/initial-layout
 ## Стек
 HTML, CSS, JavaScript
 

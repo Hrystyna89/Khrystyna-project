@@ -1,16 +1,6 @@
-
-function add(a, b) {
-  return a + b;
-}
-
-function isAdult(age) {
-  return age >= 18;
-}
-
-module.exports = { add, isAdult };
-
 const { add, isAdult } = require('./math');
 
+// UNIT TESTS
 test('додає числа', () => {
   expect(add(2, 3)).toBe(5);
 });
@@ -31,10 +21,11 @@ test('перевірка дитини (17)', () => {
   expect(isAdult(17)).toBe(false);
 });
 
-const api = {
-  getUser: jest.fn(() => ({ name: "Ann" }))
-};
-
+// MOCK TEST
 test('mock API', () => {
+  const api = {
+    getUser: jest.fn().mockReturnValue({ name: "Ann" })
+  };
+
   expect(api.getUser().name).toBe("Ann");
 });
